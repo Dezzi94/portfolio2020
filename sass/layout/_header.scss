@@ -1,0 +1,169 @@
+.header{
+    background-color:$not-black;
+ 
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 10px 30px 0 rgba($color-white, .4);
+    position: fixed;
+    top: 0;
+    z-index: 4;
+
+    &__logo{
+        color:$color-white;
+        text-transform: uppercase;
+        position: absolute;
+        padding: 20px 20px;
+        top: 10%;
+    }
+    .menu{
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size:18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        &__item{
+            // background-color: yellow;
+            // margin-bottom: 10px;
+            float: left;
+            &--element{
+                display: block;
+                text-decoration: none;
+                padding: 25px 20px;
+                color: $heading-color;
+                // border-right: 2px solid $heading-color;
+            &:hover{
+               
+                color: $color-white;
+               
+            }
+        }
+        &:not(:last-child){
+            border-right: 2px solid $heading-color;
+        }
+        }
+
+        @media (max-width:900px){
+          // background-color: green;
+          overflow: hidden;
+          height: 0;
+          opacity: 0;
+          
+        }
+
+    }
+ 
+    &__menu-btn:checked ~ .menu{
+        
+        @media (max-width:900px){
+            height: 70vh;
+            opacity: 1;
+            //background-color: yellow;
+            .menu__item{
+                float: none;
+                border-right: none;
+                border-bottom:2px solid $heading-color;
+            
+         }
+         top: 100%;
+         left: 0;
+         background-image: linear-gradient(to right,$color-black,$color-grey);
+         transition: opacity .8s 0s;
+        }
+           
+    
+       
+        
+     
+    }
+    &__menu-icon{
+        //background-color: grey;
+        padding: 28px 24px;
+        position: relative;
+        /*Float to right*/
+        float: right;
+        cursor: pointer;
+        display: none;
+        @media (max-width:900px){
+            display: block;
+        }
+    }
+
+    &__nav-icon{
+        background: $color-white;
+        display: block;
+        width: 40px;
+        height: 2px;
+        position: relative;
+        transition:  all .2s ease-out;
+        &:before,&:after{
+                    background: $color-white;
+                    content: '';
+                    display: block;
+                    width: 40px;
+                    height: 2px;
+                    position: absolute;
+                    transition:  all .4s ease-out;
+        }
+        &:before{
+            top: 10px;
+        
+        }
+        &:after{
+          
+            top: -10px;
+        }
+    }
+    // &__nav-icon:before{
+    //     background: $color-white;
+    //     content: '';
+    //     display: block;
+    //     width: 35px;
+    //     height: 2px;
+    //     position: absolute;
+    //     top: 9px;
+    // }
+    // &__nav-icon:after{
+    //     background: $color-white;
+    //     content: '';
+    //     display: block;
+    //     width: 35px;
+    //     height: 2px;
+    //     position: absolute;
+    //     top: -9px;
+    // }
+    // &__nav-icon:before,&__nav-icon:after{
+    //         background: $color-white;
+    //         content: '';
+    //         display: block;
+    //         width: 35px;
+    //         height: 2px;
+    //         position: absolute;
+    // }
+    // &__nav-icon:before{
+    //     top: 9px;
+    // }
+    // &__nav-icon:after{
+    //     top: -9px;
+    // }
+
+    /*Hide the checkbox*/
+  &__menu-btn{
+      display: none;
+  }
+  &__menu-btn:checked ~ &__menu-icon &__nav-icon{
+   background-color: transparent;
+}
+
+  &__menu-btn:checked ~ &__menu-icon &__nav-icon:before{
+      top: 0;
+      transform:rotate(-135deg);
+  }
+  &__menu-btn:checked ~ &__menu-icon &__nav-icon:after{
+    top: 0;
+    transform:rotate(135deg);
+}
+}
+

@@ -1,0 +1,119 @@
+.gallery{
+    background-color: $color-grey-dark;
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    &-list{
+
+        width: 900px;
+       // background-color: yellowgreen;
+       background-color: $color-grey-exp;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-auto-rows: 185px;
+        grid-gap: 7px;
+
+
+        @media (max-width:900px) {
+            width: 100%;
+            grid-auto-rows: 80px;
+        }
+        &--element-1{
+            background-color: yellow;
+            grid-column: 1/4;
+            grid-row:1/2;
+            // grid-column-start:1;
+            // grid-column-end:5;
+        }
+        &--element-2{
+            background-color: brown;
+            grid-row:1/2;
+            grid-column: 4/-1;
+        }
+        &--element-3{
+            background-color: purple;
+            grid-row:2/3;
+            grid-column: 1/3;
+        }
+        &--element-4{
+            background-color: rosybrown;
+            grid-row:2/3;
+            grid-column: 3/5;
+        }
+        &--element-5{
+            background-color: orangered;
+            grid-row:2/3;
+            grid-column: 5/-1;
+        }
+
+        &--element-6{
+            background-color: royalblue;
+            grid-row:3/4;
+            grid-column: 1/ span 3;
+        }
+        &--element-7{
+            background-color:springgreen;
+            grid-row:3/4;
+            grid-column: 4/ -1;
+        }
+        &--element-8{
+            background-color:slategray;
+            grid-row:4/5;
+            grid-column: 1/ span 1;
+        }
+        &--element-9{
+            background-color:aqua;
+            grid-row:4/5;
+            grid-column: 2/ -1;
+        }
+        &--element-10{
+            background-color:wheat;
+            grid-row:5/6;
+            grid-column: 1/ 5;
+        }
+        &--element-11{
+            background-color:red;
+            grid-row:5/8;
+            grid-column: 5/-1;
+        }
+        &--element-12{
+            background-color:olivedrab;
+            grid-row:6/8;
+            grid-column: 1/ 3;
+        }
+        &--element-13{
+            background-color:salmon;
+            grid-row:6/8;
+            grid-column: 3/ span 2;
+        }
+        // &--element-10{
+        //     background-color:wheat;
+        //     grid-row:5/6;
+        //     grid-column: 1/ 5;
+        // }
+        &__element{
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            -ms-transition:all .2s ease;
+            transition: all .2s ease;
+        
+        }
+        &__element:hover{
+            transform: scale(1.1);
+            -webkit-filter: all .2s ease;
+            -moz-filter: all .2s ease;
+            -o-filter: all .2s ease;
+            -ms-filter:all .2s ease;
+            filter: blur(15px);
+            cursor: pointer;
+        }
+    }
+}

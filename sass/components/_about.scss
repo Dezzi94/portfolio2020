@@ -1,0 +1,78 @@
+.about_me{
+    //background-color: orangered;
+  
+    min-height: 100vh;
+    
+    //  margin-top: 250px;
+    
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 100px minmax(100px,min-content);
+    
+    justify-content: center;
+    align-items: center;
+
+    //  background: var(--color-light-pink);
+    &__icon{
+
+        grid-column: 3/4;
+        justify-self: center;
+   
+ 
+        padding-top: 120px;
+        @media (max-width:800px){
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+        &-profile-img{
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    &-heading{
+        grid-column: 5/11;
+        @media (max-width:800px){
+            justify-self: center;
+            align-self: end;
+            grid-column: 1/-1;
+            grid-row: 2/3;
+        }
+    }
+    &-desc{
+        grid-row: 2/3;
+        grid-column: 5/11;
+        color: $color-grey;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        justify-self: start;
+        @media (max-width:800px){
+            grid-column: 2/-1;
+            grid-row: 3/4;
+        }
+    }
+}
+
+/*Quick bootstrap template*/
+// .about_me{
+
+//     text-align: center;
+//     &__icon{
+
+//         margin-top: 10px;
+//         margin-bottom: 50px;
+//         &-profile-img{
+//             height: 80px;
+//             width: 80px;
+//             background-size: cover;
+//             background-repeat: no-repeat;
+//             border-radius: 50%;
+//         }
+//     }
+//     &-desc{
+//         text-align: left !important;
+//     }
+// }

@@ -1,0 +1,50 @@
+.newsletter{
+    background-color: $heading-color;
+  
+    min-height: 100vh;
+    &__container{
+        //background-color: greenyellow;
+        text-align: center;
+        max-width: 650px;
+        margin: 0 auto;
+        margin-top: 400px;
+
+
+        &--input{
+            position: relative;
+            .input-form{
+                display: flex;
+                width: 100%;
+            }
+            &-field{
+                text-transform: uppercase;
+                height: 50px;
+                font-family: $roboto-font;
+                border: 1px solid $not-black;
+                font-size: 14px;
+                width: 100%;
+            }
+            &-field::placeholder{
+                letter-spacing: 4px;
+            }
+        }
+
+        &--input-btn{
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 12%;
+            right: 1%;
+            transition: all .2s;
+            i{
+                font-size: 40px;
+            }
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+
+       
+    }
+}

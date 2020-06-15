@@ -1,0 +1,44 @@
+.primary-heading{
+    color: $heading-color;
+    font-size: 80px !important;
+    text-align: center;
+    text-shadow: 6px 6px 0px rgba($color-black,.6);
+    @media (max-width:900px) {
+      font-size: 45px !important;
+    }
+}
+.about_me-heading{
+
+  color: $color-grey-dark;
+  font-weight: darken;
+  letter-spacing: 3px;
+  font-size: 24px;
+  text-decoration:underline;
+  text-decoration-color: $heading-color;
+}
+
+.heading-subscribe{
+  color: $not-black;
+  font-size: 35px !important;
+
+  text-transform: uppercase;
+ 
+  color: $not-black;
+  padding: 15px 30px;
+
+  @media (max-width:700px) {
+    font-size: 25px !important;
+  }
+}
+.notransition{
+
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -o-transform: none !important;
+  transform: none !important;
+
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

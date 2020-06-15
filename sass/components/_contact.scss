@@ -1,0 +1,177 @@
+.contact_me{
+    background-color: $not-black;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    &__wrap{
+        width: 500px;
+        height: 600px;
+        border-radius: 10px;
+        background-color: $color-grey-contact;
+        padding: 15px 30px;
+        box-shadow: 0 5px 10px rgba($color-white,.4);
+        @media (max-width:700px){
+               
+            width: 95%;
+            
+        }
+        &-form{
+            //background-color: seagreen;
+            width: 100%;
+
+            &--title{
+                color: $heading-color;
+                line-height: 1.2;
+                text-align: center;
+                padding: 10px 20px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                @media (max-width:700px){
+                  text-align: left;
+                  font-size: 24px;
+                  
+                }
+            }
+
+            &-btn{
+                font-size: 18px;
+               // background-color: yellow;
+                display: flex;
+                justify-content: center;
+                padding: 20px 40px;
+                span{
+                    padding:10px 20px;
+                }
+                @media (max-width:700px){
+               
+                    padding: 5px 10px;
+                   
+                    span{
+                        padding:0;
+                    }  
+                }
+
+             
+                &--styles{
+                    color: $color-white;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    background: linear-gradient(to right, rgba($color-black,40%), rgba(grey,74%));
+                    transition: all .3s;
+                    i{
+                        padding: 5px 10px;
+                    }
+                }
+                &--styles:hover{
+                   
+                    font-size: 21px;
+                    transform: scale(1.05);
+                    box-shadow: 0 10px 20px rgba($color-black,.4);
+                    
+                @media (max-width:700px){
+                    font-size: 18px;
+                    transform: scale(1);
+                  
+                }
+                }
+
+
+            }
+        }
+
+        // style the form elements
+        &__group{
+           // background-color: rosybrown;
+            width: 100%;
+            position: relative;
+            margin-bottom: 5px;
+           &--label{
+            font-family: $roboto-font;
+               font-size: 17px;
+               color: $heading-color;
+               line-height: 1.5;
+               padding-left: 5px;
+               
+           }
+           &--input{
+               width: 100%;
+               font-family: $roboto-font;
+               height: 50px;
+               font-size: 18px;
+               line-height: 1.2;
+               padding: 0 5px;
+               border: none;
+               background-color: transparent;
+               color: #242222;
+               border-bottom: 2px solid #d9d9d9;
+           }
+
+           &--textarea{
+               outline: none;
+               border: none;
+               background-color: inherit;
+               font-size: 20px;
+               min-height: 110px;
+               width: 100%;
+               border-bottom: 2px solid #d9d9d9;
+               
+           }
+
+           &--select{
+               display: block;
+               width: 100%;
+               font-size: 12px;
+               height: auto !important;
+               border-radius: 3px;
+               font-size: 12px;
+               border: 1px solid #e3e3e3;
+               color: #444444;
+               background-color: transparent;
+               line-height: 16px !important;
+        
+               -webkit-appearance: none;
+               -moz-appearance: none;
+               appearance: none;
+               background: url("../../img/selectbox-arrow.png") right  center no-repeat;
+               margin-bottom: 5px;      
+           }
+
+           &--focus{
+               position: absolute;
+               display: block;
+               width: 100%;
+               height: 100%;
+               top: 0;
+               left: 0;
+               pointer-events: none;
+           }
+           &--focus::before{
+               content: "";
+               position: absolute;
+               display: block;
+               bottom: -2px;
+               width: 0%;
+               height: 3px;
+              
+               left: 0;
+               transition: all .4s;
+               background: linear-gradient(
+                   to right,
+                   rgba($color-black,10%),
+                   rgba($contact-pink-color,74%)
+               );
+           }
+
+           &--input:focus + &--focus::before{
+               width: 100%;
+           }
+           &--textarea:focus + &--focus::before{
+            width: 100%;
+        }
+        }
+    }
+
+}

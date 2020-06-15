@@ -1,0 +1,29 @@
+/*Importing the abstracts dir from sass folder*/
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+/*Importing the base dir from sass folder*/
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+/*Importing the components dir from sass folder*/
+ @import "components/video";
+ @import "components/title-box";
+ @import "components/about";
+ @import "components/education";
+ @import "components/experience";
+ @import "components/gallery";
+ @import "components/portfolio";
+ @import "components/contact";
+ @import "components/newsletter";
+ @import "components/loading";
+ @import "components/message";
+
+
+/*Importing the layout dir from sass folder*/
+@import "layout/footer";
+@import "layout/header";
+@import "layout/content";
+
+

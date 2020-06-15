@@ -1,0 +1,99 @@
+.experience{
+    // background-color: orangered;
+    background-color: $color-grey-exp;
+    box-shadow: 0 10px 20px rgba($color-black,.5);
+    
+    padding: 10px 20px;
+    min-height: 100vh;
+
+    &__title{
+        text-align: center;
+       color: $color-tertiary-light;
+       padding: 25px;
+       @media (max-width:700px){
+
+        margin-bottom: 150px;
+    }
+    }
+
+    &__article{
+        display: flex;
+       
+        flex-basis: 80%;
+       
+        align-items: center;
+        background-color: $color-grey-exp-article;
+        cursor: pointer;
+        margin-bottom: 30px;
+        border-radius: 150px;
+
+
+        @media (max-width:700px){
+            flex-direction: column;
+            border-radius: 5px;
+            margin-bottom: 100px;
+        }
+
+        &-body{
+            min-height: 100px;
+        }
+        &-body-header{
+            //background-color: yellowgreen;
+            width: 95%;
+            text-align: center;
+            border-bottom: 2px solid 
+            $color-tertiary-light;
+         
+        }
+        &-body-desc{
+            flex-wrap: wrap;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        &-img-wrapper{
+            height: 175px;
+            width: 175px;
+            border-radius: 50%;
+            background-color: $color-grey-exp;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width:700px){
+                margin-top: -100px;
+            }
+            img{
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                
+            }
+        }
+        //Apply background colors to each article
+        &--php{
+            //background-color: green;
+            background-image: linear-gradient(315deg, black 65%,grey 0%);
+            color: $color-white;
+            @media (max-width:700px){
+                background-image: linear-gradient(315deg, black 40%,grey 15%);
+            }
+        }
+        &--javascript{
+           // background-color: orangered;
+            background-image: linear-gradient(315deg, #F8872B 74%,#f5d020 0%);
+            @media (max-width:700px){
+                background-image: linear-gradient(315deg, #F8872B 50%,#f5d020 50%);
+            }
+        }
+        &--sass{
+            //background-color: slateblue;
+            background-image: linear-gradient(315deg, #c278ff 74%,#de4daa 74%);
+            @media (max-width:700px){
+                background-image: linear-gradient(315deg, #c278ff 40%,#de4daa 60%);
+            }
+        }
+    }
+    
+
+
+}
